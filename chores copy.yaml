@@ -1,0 +1,61 @@
+chores:
+  cleaning_stove:
+    frequency: weekly
+    areas: ["kitchen"]
+  cleaning_microwave:
+    frequency: monthly
+    areas: ["kitchen"]
+  vacuuming: 
+    frequency: weekly
+    areas: ["kitchen", "living_room", "guest_room", "bedroom", "office"]
+  mopping:
+    frequency: monthly
+
+# - Kitchen
+# 	- Cleaning stove - weekly
+# 	- Cleaning microwave - monthly
+# 	- Vacuuming - weekly 
+# 	- Mopping - monthly
+# 	- Coffee bar - weekly
+# 	- Taking out recycling - per need
+# 	- Taking trash - per need
+# 	- Taking Compost - per need
+# 	- Cleaning the fridge - quarterly
+# 	- Wiping the counters - weekly
+# 	- Cleaning the air fryer - weekly
+# 	- Washing the towels - when runs out
+# 	- Hand washing dishes - 2 times a week 
+# - Living room
+# 	- Cleaning the couch: 1 month
+# 	- Dusting - once a week
+# 	- Vacuuming - once a week
+# 	- Mopping - quarterly
+# 	- Tidying up - at least once a week
+# 	- Wiping the tables - weekly
+# - Guest Room
+# 	- Washing the sheets - weekly
+# 	- Vacuuming - weekly
+# 	- dusting  - weekly
+# - Office
+# 	- taking out trash - per need
+# 	- vacuuming - weekly
+# 	- dusting - weekly
+# - Laundry Room
+# 	- Vacuuming - bi-weekly
+# - Guest Bathroom
+# 	- cleaning shower - bi-monthly
+# 	- cleaning toilet - bi-weekly
+# 	- washing mats - monthly
+# 	- taking out trash - when full/before guests
+# - Primary Bedroom 
+# 	- vacuuming - weekly
+# 	- dusting - weekly 
+# 	- bed sheets laundry - weekly
+# - Primary Bathroom
+# 	- cleaning shower - monthly
+# 		- and cleaning the bathtub
+# 	- cleaning toilet - bi-weekly
+# 	- taking out the trash - weekly
+# 	- washing towels - weekly
+# 	- dusting - weekly 
+# 	- washing bathmats - monthly

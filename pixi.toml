@@ -1,0 +1,14 @@
+[workspace]
+authors = ["Misha Savchenko <savchenkmisha@gmail.com>"]
+channels = ["conda-forge"]
+name = "chores_gui"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+deploy = "python3 main.py"
+
+
+[dependencies]
+nicegui = ">=3.13.0,<4"
+deepdiff = ">=9.1.0,<10"
