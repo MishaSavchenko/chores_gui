@@ -1,0 +1,347 @@
+{
+    "chores": [
+        {
+            "chore": "cleaning_stove",
+            "name": "Cleaning Stove",
+            "frequency": "weekly",
+            "area": "kitchen",
+            "indx": 0,
+            "last_date": "08/02/2026",
+            "last_person": "Misha",
+            "next_date": "08/09/2026"
+        },
+        {
+            "chore": "cleaning_microwave",
+            "name": "Cleaning Microwave",
+            "frequency": "monthly",
+            "area": "kitchen",
+            "indx": 1,
+            "last_date": "08/02/2026",
+            "last_person": "Misha",
+            "next_date": "08/30/2026"
+        },
+        {
+            "chore": "vacuum",
+            "name": "Vacuum Kitchen",
+            "frequency": "weekly",
+            "area": "kitchen",
+            "indx": 2,
+            "last_date": "08/02/2026",
+            "last_person": "Misha",
+            "next_date": "08/09/2026"
+        },
+        {
+            "chore": "mopping",
+            "name": "Mop Kitchen",
+            "frequency": "monthly",
+            "area": "kitchen",
+            "indx": 3,
+            "last_date": "08/02/2026",
+            "last_person": "Misha",
+            "next_date": "08/30/2026"
+        },
+        {
+            "chore": "coffee_bar",
+            "name": "Coffee Bar Cleanup",
+            "frequency": "weekly",
+            "area": "kitchen",
+            "indx": 4,
+            "last_date": "08/02/2026",
+            "last_person": "Misha",
+            "next_date": "08/09/2026"
+        },
+        {
+            "chore": "recycling",
+            "name": "Take Out Recycling",
+            "frequency": "per-need",
+            "area": "kitchen",
+            "indx": 5,
+            "last_date": "08/02/2026",
+            "last_person": "Misha",
+            "next_date": "¯\\_(ツ)_/¯"
+        },
+        {
+            "chore": "trash",
+            "name": "Take Out Trash",
+            "frequency": "per-need",
+            "area": "kitchen",
+            "indx": 6,
+            "last_date": "08/02/2026",
+            "last_person": "Kay",
+            "next_date": "¯\\_(ツ)_/¯"
+        },
+        {
+            "chore": "compost",
+            "name": "Take Out Compost",
+            "frequency": "per-need",
+            "area": "kitchen",
+            "indx": 7,
+            "last_date": "08/02/2026",
+            "last_person": "Misha",
+            "next_date": "¯\\_(ツ)_/¯"
+        },
+        {
+            "chore": "cleaning_fridge",
+            "name": "Cleaning The Fridge",
+            "frequency": "quarterly",
+            "area": "kitchen",
+            "indx": 8,
+            "last_date": "08/02/2026",
+            "last_person": "Misha",
+            "next_date": "10/25/2026"
+        },
+        {
+            "chore": "cleaning_air_fryer",
+            "name": "Cleaning The Air Fryer",
+            "frequency": "weekly",
+            "area": "kitchen",
+            "indx": 9,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "washing_towels",
+            "name": "Washing Towels",
+            "frequency": "per-need",
+            "area": "kitchen",
+            "indx": 10,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "dishes",
+            "name": "Hand Washing Dishes",
+            "frequency": "semi-weekly",
+            "area": "kitchen",
+            "indx": 11,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "cleaning_couch",
+            "name": "Cleaning The Couch",
+            "frequency": "monthly",
+            "area": "living_room",
+            "indx": 12,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "dusting",
+            "name": "Dusting the Living Room",
+            "frequency": "weekly",
+            "area": "living_room",
+            "indx": 13,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "mopping",
+            "name": "Mopping the Living Room",
+            "frequency": "quarterly",
+            "area": "living_room",
+            "indx": 14,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "tidying_up",
+            "name": "Tidying Up the Living Room",
+            "frequency": "weekly",
+            "area": "living_room",
+            "indx": 15,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "cleaning_tables",
+            "name": "Wiping the tables",
+            "frequency": "weekly",
+            "area": "living_room",
+            "indx": 16,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "vacuuming",
+            "name": "Vacuuming the Guest Room",
+            "frequency": "weekly",
+            "area": "guest_room",
+            "indx": 17,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "laundry",
+            "name": "Washing Guest Room Sheets",
+            "frequency": "weekly",
+            "area": "guest_room",
+            "indx": 18,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "dusting",
+            "name": "Dusting The Guest Room",
+            "frequency": "weekly",
+            "area": "guest_room",
+            "indx": 19,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "trash",
+            "name": "Taking out the Trash",
+            "frequency": "per-need",
+            "area": "office",
+            "indx": 20,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "dusting",
+            "name": "Dusting The Office",
+            "frequency": "weekly",
+            "area": "office",
+            "indx": 21,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "vacuuming",
+            "name": "Vacuuming The Guest Room",
+            "frequency": "weekly",
+            "area": "office",
+            "indx": 22,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "vacuuming",
+            "name": "Vacuuming the Laundry",
+            "frequency": "semi-monthly",
+            "area": "office",
+            "indx": 23,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "cleaning",
+            "name": "Cleaning The Shower",
+            "frequency": "quarterly",
+            "area": "guest_bathroom",
+            "indx": 24,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "cleaning",
+            "name": "Cleaning The Toilet",
+            "frequency": "semi-monthly",
+            "area": "guest_bathroom",
+            "indx": 25,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "laundry",
+            "name": "Washing Bathmats",
+            "frequency": "monthly",
+            "area": "guest_bathroom",
+            "indx": 26,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "trash",
+            "name": "Taking out the Trash",
+            "frequency": "per-need",
+            "area": "guest_bathroom",
+            "indx": 27,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "vacuuming",
+            "name": "Vacuuming the Bedroom",
+            "frequency": "weekly",
+            "area": "primary_bedroom",
+            "indx": 28,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "dusting",
+            "name": "Dusting the Bedroom",
+            "frequency": "weekly",
+            "area": "primary_bedroom",
+            "indx": 29,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "laundry",
+            "name": "Washing the Sheets",
+            "frequency": "weekly",
+            "area": "primary_bedroom",
+            "indx": 30,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "cleaning",
+            "name": "Cleaning the Shower",
+            "frequency": "monthly",
+            "area": "primary_bathroom",
+            "indx": 31,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "cleaning",
+            "name": "Cleaning the Toilet",
+            "frequency": "semi-monthly",
+            "area": "primary_bathroom",
+            "indx": 32,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "trash",
+            "name": "Taking out the Bathroom Trash",
+            "frequency": "weekly",
+            "area": "primary_bathroom",
+            "indx": 33,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "dusting",
+            "name": "Dusting the Bathroom",
+            "frequency": "weekly",
+            "area": "primary_bathroom",
+            "indx": 34,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "laundry",
+            "name": "Washing the Towels",
+            "frequency": "weekly",
+            "area": "primary_bathroom",
+            "indx": 35,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        },
+        {
+            "chore": "laundry",
+            "name": "Washing the Bathmats",
+            "frequency": "monthly",
+            "area": "primary_bathroom",
+            "indx": 36,
+            "last_date": "05/04/2023",
+            "last_person": ":("
+        }
+    ],
+    "timestamp": 1785722655.986236
+}
