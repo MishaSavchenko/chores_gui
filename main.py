@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 import yaml
+import json
 from deepdiff import DeepDiff
 from copy import deepcopy
 from nicegui import ui, events
@@ -9,6 +10,8 @@ class ChoresGui:
 
     diff_history = []
     history_indx = 0
+
+    chores_filename = "db/chores.json"
 
     # Buttons
     backward_btn = None
@@ -23,25 +26,34 @@ class ChoresGui:
                       "semi-monthly": timedelta(days=15),
                       }
 
-    def __init__(self):
+    def __init__(self, debug=True):
+        if debug:
+            f = './chores.yaml'
+            with open(f, 'r') as content:
+                chores_schema = yaml.load(content, Loader=yaml.SafeLoader)
 
-        f = './chores.yaml'
-        with open(f, 'r') as content:
-            chores_schema = yaml.load(content, Loader=yaml.SafeLoader)
+            for indx, chore in enumerate(chores_schema["chores"]):
+                chore["indx"] = indx
+                chore["last_date"] = datetime(
+                    2023, 5, 4, 0, 0).strftime('%m/%d/%Y')
+                chore["last_person"] = ":("
+
+            chores_schema["timestamp"] = datetime.now()
+            self.diff_history.append(chores_schema)
+
+            self.chores_filename = "db/debug_chores.json"
+
+        else:
+            loaded_chores = None
+            with open(self.chores_filename, "r") as file:
+                loaded_chores = json.load(file)
+
+            self.diff_history.append(loaded_chores)
 
         ani_kay = ui.image('kay.svg')
         ani_kay.set_visibility(False)
         ani_misha = ui.image('misha.svg').style('width: 50%')
         ani_misha.set_visibility(False)
-
-        for indx, chore in enumerate(chores_schema["chores"]):
-            chore["indx"] = indx
-            chore["last_date"] = datetime(
-                2023, 5, 4, 0, 0).strftime('%m/%d/%Y')
-            chore["last_person"] = ":("
-
-        chores_schema["timestamp"] = datetime.now()
-        self.diff_history.append(chores_schema)
 
         self.layout_setup()
 
@@ -125,9 +137,14 @@ class ChoresGui:
         sel.sender.update_rows(updated_chores["chores"])
 
         if updated_chores["chores"] != self.get_chores()["chores"]:
-            updated_chores["timestamp"] = datetime.now()
+            updated_chores["timestamp"] = datetime.now().timestamp()
             self.diff_history.append(updated_chores)
             # self.time_travel(sel)
+            self.save_data()
+
+    def save_data(self):
+        with open(self.chores_filename, 'w') as fp:
+            json.dump(self.diff_history[-1], fp, indent=4, ensure_ascii=False)
 
     def time_travel(self, e: events.ClickEventArguments) -> None:
         if e.sender == self.backward_btn:
@@ -153,7 +170,7 @@ class ChoresGui:
 
 
 def main():
-    ChoresGui()
+    ChoresGui(debug=False)
 
 
 if __name__ in ('__main__', '__mp_main__'):
