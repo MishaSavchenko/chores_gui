@@ -6,6 +6,8 @@ from nicegui import ui
 
 
 def main():
+    global table
+
     dark = ui.dark_mode()
     dark.enable()
     ui.label('Switch mode:')
@@ -33,24 +35,30 @@ def main():
                 ani_kay.set_visibility(False)
 
     diff_history = []
-    history_indx = -1
+    global history_indx
+    history_indx = 0
 
     backward_btn = None
+    timestamp_btn = None
     forward_btn = None
 
     def time_travel(e):
-        print(e)
         global history_indx
         if e.sender == backward_btn:
-            history_indx -= 1
-            print("backward")
-            print(history_indx & len(diff_history))
-            pass
+            history_indx = (history_indx - 1) % len(diff_history)
         elif e.sender == forward_btn:
-            print("forward")
-            pass
+            history_indx = (history_indx + 1) % len(diff_history)
+
+        if history_indx == 0:
+            backward_btn.disable()
         else:
-            print("FUCK")
+            backward_btn.enable()
+
+        if history_indx == len(diff_history) - 1:
+            forward_btn.disable()
+        else:
+            forward_btn.enable()
+        table.update_rows(diff_history[history_indx]["chores"])
 
     with ui.row():
         user_toggle = ui.toggle(
@@ -58,6 +66,7 @@ def main():
 
         with ui.button_group():
             backward_btn = ui.button('<-', on_click=time_travel)
+            timestamp_btn = ui.button('Click me!')
             forward_btn = ui.button('->', on_click=time_travel)
 
     frequency_dict = {"weekly": timedelta(weeks=1),
@@ -72,6 +81,10 @@ def main():
         chore["indx"] = indx
         chore["last_date"] = datetime(2023, 5, 4, 0, 0).strftime('%m/%d/%Y')
         chore["last_person"] = ":("
+
+    chores["timestamp"] = datetime.now()
+    timestamp_btn.set_text(chores["timestamp"])
+    diff_history.append(chores)
 
     def update_row_date(row):
         try:
@@ -94,9 +107,8 @@ def main():
         sel.sender.update_rows(chores["chores"])
 
         new_dict = deepcopy(chores)
+        new_dict["timestamp"] = datetime.now()
         diff_history.append(new_dict)
-        # diff = DeepDiff(curr_dict, new_dict)
-        # diff_history.append(diff)
 
     table = ui.table(
         columns=[{'name': 'Chore', 'label': 'Chore', 'field': 'name'},
