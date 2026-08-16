@@ -61,13 +61,16 @@ class ChoresGui:
 
         dark = ui.dark_mode()
         dark.enable()
-        ui.label('Switch mode:')
-        ui.button('Dark', on_click=dark.enable)
-        ui.button('Light', on_click=dark.disable)
 
-        with ui.row():
-            self.user_toggle = ui.toggle(
-                ["Kay", "Misha"], value="Misha", on_change=self.inject_input)
+        with ui.header(elevated=True).style('background-color: #3874c8').classes('items-center justify-between'):
+            with ui.row():
+                ui.label('Switch mode:')
+                ui.button('Dark', on_click=dark.enable)
+                ui.button('Light', on_click=dark.disable)
+
+            with ui.row():
+                self.user_toggle = ui.toggle(
+                    ["Kay", "Misha"], value="Misha", on_change=self.inject_input)
 
             # with ui.button_group():
             #     self.backward_btn = ui.button('<-', on_click=self.time_travel)
