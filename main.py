@@ -71,13 +71,19 @@ class ChoresGui:
             with ui.row():
                 self.user_toggle = ui.toggle(
                     ["Kay", "Misha"], value="Misha", on_change=self.inject_input)
-
+        self.right_drawer = ui.right_drawer(fixed=False).style(
+            'background-color: #3874c8').props('bordered')
+        with self.right_drawer as right_drawer:
+            ui.label('RIGHT DRAWER')
+            self.date = ui.date(value='2023-01-01',
+                                on_change=lambda e: print(e.value))
+            # right_drawer.hide()
             # with ui.button_group():
             #     self.backward_btn = ui.button('<-', on_click=self.time_travel)
             #     self.timestamp_btn = ui.button('Click me!')
             #     self.timestamp_btn.set_text(self.get_chores()["timestamp"])
             #     self.forward_btn = ui.button('->', on_click=self.time_travel)
-
+        # self.date = ui.date_input('Date', value='2025-05-31')
         self.table = ui.table(
             columns=[{'name': 'Chore', 'label': 'Chore', 'field': 'name'},
                      {'name': 'Area', 'label': 'Area', 'field': 'area'},
@@ -98,10 +104,11 @@ class ChoresGui:
         )
         with self.table.add_slot('body-cell-next_date'):
             with self.table.cell('next_date') as cell:
-                ui.badge().props('''
-                                :color=" Date.parse(props.value) < Date.now() ? 'red' : 'green'"
-                                :label="props.value"
-                                ''')
+                with ui.badge() as badge:
+                    badge.props('''
+                        :color=" Date.parse(props.value) < Date.now() ? 'red' : 'green'"
+                        :label="props.value"
+                        ''')
 
     def get_chores(self, index: int = None) -> dict:
         if index is None:
